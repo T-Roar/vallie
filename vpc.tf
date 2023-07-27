@@ -3,13 +3,11 @@ resource "aws_vpc" "network" {
   for_each = var.vpcs
 
   cidr_block = each.value.cidr_block
-#   region = each.value.region
   instance_tenancy = each.value.instance_tenancy
 
   tags = {
     Name = "VPC-${each.key}"
   }
-
 }
 
 
