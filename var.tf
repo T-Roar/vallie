@@ -20,5 +20,5 @@ variable "vpcs" {
 
 variable "desired_regions" {
   type    = list(string)
-  default = ["us-east-1", "eu-west-1"]  # Replace with your desired AWS regions
+  default = ["us-east-1", "eu-west-1"] 
 }
