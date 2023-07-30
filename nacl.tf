@@ -34,10 +34,10 @@ resource "aws_network_acl_rule" "ssh_inbound" {
 
   network_acl_id = each.value.id
   rule_number    = 100
-  protocol       = "6"  # TCP
+  protocol       = "6" # TCP
   rule_action    = "allow"
   egress         = false
-  cidr_block     = "0.0.0.0/0"  # All IP addresses
+  cidr_block     = "0.0.0.0/0" # All IP addresses
   from_port      = local.ssh_port_range
   to_port        = local.ssh_port_range
 

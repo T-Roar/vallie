@@ -38,3 +38,13 @@ locals {
   external_subnet_ids = [for vpc_key, vpc in aws_vpc.network : aws_subnet.external_subnet[vpc_key].id]
   ssh_port_range      = "22"
 }
+
+locals {
+  target_username = "target-admin"
+  target_password = "Treasure1234"
+}
+
+locals {
+  source_username = "source-admin"
+  source_password = "Treasure1234"
+}
